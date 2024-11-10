@@ -45,7 +45,6 @@ class MyHomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-
                     const SizedBox(height: 20),
                     FormBuilderChoiceChip<String>(// estas son las choice chips del inicio
                       autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -79,7 +78,7 @@ class MyHomePage extends StatelessWidget {
                           child: Chip(
                             label: Text('Android'),
                             backgroundColor: Colors.blue,                            
-                            ),
+                          ),
                         ),
                         FormBuilderChipOption(//tercera opcion
                           value: 'Chrome OS',

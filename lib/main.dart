@@ -47,7 +47,7 @@ class MyHomePage extends StatelessWidget {
                   children: <Widget>[
                     const SizedBox(height: 20),
                     FormBuilderChoiceChip<String>(// estas son las choice chips del inicio
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,//esta parte hace que solo se pueda seleccionar una opcion.
                       validator: FormBuilderValidators.compose(
                         [FormBuilderValidators.required()],
                       ),

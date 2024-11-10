@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
   final myController = TextEditingController();
-  final String title = 'Raúl Millán Moreno';
+  final String title = 'Raúl Millán-Salesians Sarrià 24/25';
   final _formKey = GlobalKey<FormBuilderState>();
   void _onChanged(dynamic val) => debugPrint(val.toString());
 
@@ -90,11 +90,10 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ],
                       onChanged: _onChanged,
-                    ),
-                    
+                    ),                    
                     const SizedBox(height: 20),
 
-                     FormBuilderSwitch(// el switch que representa si aceptas los terminos y condiciones.
+                    FormBuilderSwitch(// el switch que representa si aceptas los terminos y condiciones.
                       title: const Text('I Accept the terms and conditions'),
                       name: 'accept_terms_switch',
                       onChanged: _onChanged,
@@ -108,7 +107,6 @@ class MyHomePage extends StatelessWidget {
                         )
                       ),
                     ),
-
                     const SizedBox(height: 20),
 
                     FormBuilderTextField(//este es un campo de texto, el cual es la tercera parte del formulario
@@ -133,8 +131,7 @@ class MyHomePage extends StatelessWidget {
                           errorText: 'Máximo 15 caracteres'),
                       ]),   
                       onChanged: _onChanged,                   
-                    ),
-            
+                    ),            
                     const SizedBox(height: 20),
 
                     FormBuilderDropdown<String>(// es el dropdown que te hace seleccionar entre tres paises
@@ -152,9 +149,9 @@ class MyHomePage extends StatelessWidget {
                       ),
                       items: ['Findland', 'Spain', 'United Kindom']
                           .map((lang) => DropdownMenuItem(
-                                value: lang,
-                                child: Text(lang),
-                              ))
+                              value: lang,
+                              child: Text(lang),
+                            ))
                           .toList(),
                       onChanged: _onChanged,
                     ),

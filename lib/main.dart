@@ -49,6 +49,9 @@ class MyHomePage extends StatelessWidget {
                     FormBuilderChoiceChip<String>(// estas son las choice chips del inicio
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       selectedColor: Colors.grey,
+                      spacing: 10,
+                      alignment: WrapAlignment.center,
+                      runSpacing: 10,
                       validator: FormBuilderValidators.compose(
                         [FormBuilderValidators.required()],
                       ),
@@ -114,11 +117,14 @@ class MyHomePage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      maxLength: 15,
                       validator: FormBuilderValidators.compose([
                         FormBuilderValidators.required(
                           errorText: 'Este campo es obligatorio.'),
                         FormBuilderValidators.maxLength(15,
                           errorText: 'Máximo 15 caracteres'),
+                        FormBuilderValidators.minLength(1,
+                          errorText: 'Mínimo 1 caracter'),
                       ]),   
                       onChanged: _onChanged,                   
                     ),            

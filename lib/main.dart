@@ -47,12 +47,14 @@ class MyHomePage extends StatelessWidget {
                   children: <Widget>[
                     const SizedBox(height: 20),
                     FormBuilderChoiceChip<String>(// estas son las choice chips del inicio
-                      autovalidateMode: AutovalidateMode.onUserInteraction,//esta parte hace que solo se pueda seleccionar una opcion.
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      selectedColor: Colors.grey,
                       validator: FormBuilderValidators.compose(
                         [FormBuilderValidators.required()],
                       ),
+                      backgroundColor: Colors.blue,
                       decoration: const InputDecoration(
-                        labelText: 'Choice chips',
+                        labelText: 'Choice chips',                        
                         border: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.blue,
@@ -67,26 +69,14 @@ class MyHomePage extends StatelessWidget {
                           avatar: FlutterLogo(
                             size: 50,
                           ), 
-                          child: Chip(
-                            label: Text('Flutter'),
-                            backgroundColor: Colors.blue,                            
-                            ),
                         ),
                         FormBuilderChipOption(//segunda opcion
                           value: 'Android',
                           avatar: SizedBox.shrink(), 
-                          child: Chip(
-                            label: Text('Android'),
-                            backgroundColor: Colors.blue,                            
-                          ),
                         ),
                         FormBuilderChipOption(//tercera opcion
                           value: 'Chrome OS',
                           avatar: SizedBox.shrink(),  
-                          child: Chip(
-                            label: Text('Chrome OS'),
-                            backgroundColor: Colors.blue,                            
-                            ),
                         ),
                       ],
                       onChanged: _onChanged,
